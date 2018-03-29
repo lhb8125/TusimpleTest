@@ -1,0 +1,31 @@
+INFO:root:Namespace(aug_level=2, batch_size=32, bn_mom=0.9, data_dir='data/cifar10', data_type='cifar10', depth=20, frequent=50, global_bn=True, gpus='0', kv_store='local', list_dir='./', lr=0.1, memonger=False, model_load_epoch=0, mom=0.9, num_classes=1000, num_examples=50000, num_gpus='1', retrain=False, wd=0.0001, workspace=512)
+[12:31:50] src/io/iter_image_recordio_2.cc:170: ImageRecordIOParser2: data/cifar10/train.rec, use 4 threads for decoding..
+[12:31:52] src/io/iter_image_recordio_2.cc:170: ImageRecordIOParser2: data/cifar10/val.rec, use 4 threads for decoding..
+train_resnet.py:124: DeprecationWarning: [91mmxnet.model.FeedForward has been deprecated. Please use mxnet.mod.Module instead.[0m
+  multi_factor_scheduler(begin_epoch, epoch_size, step=[30, 60, 90], factor=0.1),
+/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/model.py:577: DeprecationWarning: [91mCalling initializer with init(str, NDArray) has been deprecated.please use init(mx.init.InitDesc(...), NDArray) instead.[0m
+  self.initializer(k, v)
+/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/model.py:583: DeprecationWarning: [91mCalling initializer with init(str, NDArray) has been deprecated.please use init(mx.init.InitDesc(...), NDArray) instead.[0m
+  self.initializer(k, v)
+INFO:root:Start training with [gpu(0)]
+[12:31:54] src/operator/nn/./cudnn/./cudnn_algoreg-inl.h:107: Running performance tests to find the best convolution algorithm, this can take a while... (setting env variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+Traceback (most recent call last):
+  File "train_resnet.py", line 169, in <module>
+    main()
+  File "train_resnet.py", line 133, in main
+    epoch_end_callback = checkpoint)
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/model.py", line 877, in fit
+    sym_gen=self.sym_gen)
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/model.py", line 311, in _train_multi_device
+    executor_manager.update_metric(eval_metric, data_batch.label)
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/executor_manager.py", line 441, in update_metric
+    self.curr_execgrp.update_metric(metric, labels)
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/executor_manager.py", line 293, in update_metric
+    metric.update(labels_slice, texec.outputs)
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/metric.py", line 294, in update
+    metric.update(labels, preds)
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/metric.py", line 393, in update
+    pred_label = pred_label.asnumpy().astype('int32')
+  File "/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/ndarray/ndarray.py", line 1793, in asnumpy
+    ctypes.c_size_t(data.size)))
+KeyboardInterrupt

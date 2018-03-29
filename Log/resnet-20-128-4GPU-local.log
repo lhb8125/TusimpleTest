@@ -1,0 +1,561 @@
+INFO:root:Namespace(aug_level=2, batch_size=128, bn_mom=0.9, data_dir='data/cifar10', data_type='cifar10', depth=20, frequent=50, global_bn=False, gpus='0,1,2,3', kv_store='local', list_dir='./', lr=0.1, memonger=False, model_load_epoch=0, mom=0.9, num_classes=1000, num_examples=50000, num_gpus='1', retrain=False, wd=0.0001, workspace=512)
+[16:57:51] src/io/iter_image_recordio_2.cc:170: ImageRecordIOParser2: data/cifar10/train.rec, use 4 threads for decoding..
+[16:57:52] src/io/iter_image_recordio_2.cc:170: ImageRecordIOParser2: data/cifar10/val.rec, use 4 threads for decoding..
+train_resnet.py:124: DeprecationWarning: [91mmxnet.model.FeedForward has been deprecated. Please use mxnet.mod.Module instead.[0m
+  multi_factor_scheduler(begin_epoch, epoch_size, step=[30, 60, 90], factor=0.1),
+/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/model.py:577: DeprecationWarning: [91mCalling initializer with init(str, NDArray) has been deprecated.please use init(mx.init.InitDesc(...), NDArray) instead.[0m
+  self.initializer(k, v)
+/home/tusimple/Hongbin/incubator-mxnet/python/mxnet/model.py:583: DeprecationWarning: [91mCalling initializer with init(str, NDArray) has been deprecated.please use init(mx.init.InitDesc(...), NDArray) instead.[0m
+  self.initializer(k, v)
+INFO:root:Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+[16:57:54] src/operator/nn/./cudnn/./cudnn_algoreg-inl.h:107: Running performance tests to find the best convolution algorithm, this can take a while... (setting env variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+INFO:root:Epoch[0] Batch [50]	Speed: 7840.69 samples/sec	accuracy=0.261250
+INFO:root:Epoch[0] Batch [100]	Speed: 8602.65 samples/sec	accuracy=0.370781
+INFO:root:Epoch[0] Batch [150]	Speed: 8739.25 samples/sec	accuracy=0.434063
+INFO:root:Epoch[0] Batch [200]	Speed: 8409.61 samples/sec	accuracy=0.469375
+INFO:root:Epoch[0] Batch [250]	Speed: 7522.83 samples/sec	accuracy=0.534531
+INFO:root:Epoch[0] Batch [300]	Speed: 8940.90 samples/sec	accuracy=0.544844
+INFO:root:Epoch[0] Batch [350]	Speed: 8765.32 samples/sec	accuracy=0.580313
+INFO:root:Epoch[0] Resetting Data Iterator
+INFO:root:Epoch[0] Time cost=6.492
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0001.params"
+INFO:root:Epoch[0] Validation-accuracy=0.586531
+INFO:root:Epoch[1] Batch [50]	Speed: 8278.24 samples/sec	accuracy=0.610000
+INFO:root:Epoch[1] Batch [100]	Speed: 8130.05 samples/sec	accuracy=0.621875
+INFO:root:Epoch[1] Batch [150]	Speed: 8418.12 samples/sec	accuracy=0.639687
+INFO:root:Epoch[1] Batch [200]	Speed: 7938.57 samples/sec	accuracy=0.640625
+INFO:root:Epoch[1] Batch [250]	Speed: 7862.19 samples/sec	accuracy=0.660781
+INFO:root:Epoch[1] Batch [300]	Speed: 8197.36 samples/sec	accuracy=0.662344
+INFO:root:Epoch[1] Batch [350]	Speed: 8295.42 samples/sec	accuracy=0.678750
+INFO:root:Epoch[1] Resetting Data Iterator
+INFO:root:Epoch[1] Time cost=6.137
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0002.params"
+INFO:root:Epoch[1] Validation-accuracy=0.688390
+INFO:root:Epoch[2] Batch [50]	Speed: 8166.59 samples/sec	accuracy=0.693438
+INFO:root:Epoch[2] Batch [100]	Speed: 8372.17 samples/sec	accuracy=0.699844
+INFO:root:Epoch[2] Batch [150]	Speed: 8003.17 samples/sec	accuracy=0.715938
+INFO:root:Epoch[2] Batch [200]	Speed: 7985.35 samples/sec	accuracy=0.727187
+INFO:root:Epoch[2] Batch [250]	Speed: 8224.47 samples/sec	accuracy=0.723437
+INFO:root:Epoch[2] Batch [300]	Speed: 8140.74 samples/sec	accuracy=0.735000
+INFO:root:Epoch[2] Batch [350]	Speed: 8584.58 samples/sec	accuracy=0.730938
+INFO:root:Epoch[2] Resetting Data Iterator
+INFO:root:Epoch[2] Time cost=6.180
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0003.params"
+INFO:root:Epoch[2] Validation-accuracy=0.677017
+INFO:root:Epoch[3] Batch [50]	Speed: 7949.59 samples/sec	accuracy=0.752188
+INFO:root:Epoch[3] Batch [100]	Speed: 8224.59 samples/sec	accuracy=0.750781
+INFO:root:Epoch[3] Batch [150]	Speed: 8478.19 samples/sec	accuracy=0.756563
+INFO:root:Epoch[3] Batch [200]	Speed: 8671.94 samples/sec	accuracy=0.761406
+INFO:root:Epoch[3] Batch [250]	Speed: 8898.69 samples/sec	accuracy=0.758125
+INFO:root:Epoch[3] Batch [300]	Speed: 8492.96 samples/sec	accuracy=0.766719
+INFO:root:Epoch[3] Batch [350]	Speed: 8386.50 samples/sec	accuracy=0.777031
+INFO:root:Epoch[3] Resetting Data Iterator
+INFO:root:Epoch[3] Time cost=5.943
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0004.params"
+INFO:root:Epoch[3] Validation-accuracy=0.729628
+INFO:root:Epoch[4] Batch [50]	Speed: 7986.47 samples/sec	accuracy=0.775469
+INFO:root:Epoch[4] Batch [100]	Speed: 8992.43 samples/sec	accuracy=0.778750
+INFO:root:Epoch[4] Batch [150]	Speed: 7845.43 samples/sec	accuracy=0.792813
+INFO:root:Epoch[4] Batch [200]	Speed: 8142.22 samples/sec	accuracy=0.787344
+INFO:root:Epoch[4] Batch [250]	Speed: 7842.49 samples/sec	accuracy=0.789687
+INFO:root:Epoch[4] Batch [300]	Speed: 8704.47 samples/sec	accuracy=0.787813
+INFO:root:Epoch[4] Batch [350]	Speed: 7654.75 samples/sec	accuracy=0.786563
+INFO:root:Epoch[4] Resetting Data Iterator
+INFO:root:Epoch[4] Time cost=6.249
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0005.params"
+INFO:root:Epoch[4] Validation-accuracy=0.739517
+INFO:root:Epoch[5] Batch [50]	Speed: 8699.86 samples/sec	accuracy=0.799063
+INFO:root:Epoch[5] Batch [100]	Speed: 8792.15 samples/sec	accuracy=0.802344
+INFO:root:Epoch[5] Batch [150]	Speed: 8654.10 samples/sec	accuracy=0.812813
+INFO:root:Epoch[5] Batch [200]	Speed: 8228.67 samples/sec	accuracy=0.809688
+INFO:root:Epoch[5] Batch [250]	Speed: 8604.64 samples/sec	accuracy=0.803750
+INFO:root:Epoch[5] Batch [300]	Speed: 8406.18 samples/sec	accuracy=0.803906
+INFO:root:Epoch[5] Batch [350]	Speed: 8793.94 samples/sec	accuracy=0.818438
+INFO:root:Epoch[5] Resetting Data Iterator
+INFO:root:Epoch[5] Time cost=5.902
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0006.params"
+INFO:root:Epoch[5] Validation-accuracy=0.785008
+INFO:root:Epoch[6] Batch [50]	Speed: 7561.20 samples/sec	accuracy=0.811875
+INFO:root:Epoch[6] Batch [100]	Speed: 8409.00 samples/sec	accuracy=0.811719
+INFO:root:Epoch[6] Batch [150]	Speed: 8962.20 samples/sec	accuracy=0.827656
+INFO:root:Epoch[6] Batch [200]	Speed: 8611.60 samples/sec	accuracy=0.816562
+INFO:root:Epoch[6] Batch [250]	Speed: 8038.81 samples/sec	accuracy=0.824219
+INFO:root:Epoch[6] Batch [300]	Speed: 8528.22 samples/sec	accuracy=0.819531
+INFO:root:Epoch[6] Batch [350]	Speed: 8722.57 samples/sec	accuracy=0.825937
+INFO:root:Epoch[6] Resetting Data Iterator
+INFO:root:Epoch[6] Time cost=6.047
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0007.params"
+INFO:root:Epoch[6] Validation-accuracy=0.792425
+INFO:root:Epoch[7] Batch [50]	Speed: 8307.43 samples/sec	accuracy=0.818906
+INFO:root:Epoch[7] Batch [100]	Speed: 8488.76 samples/sec	accuracy=0.827969
+INFO:root:Epoch[7] Batch [150]	Speed: 9012.93 samples/sec	accuracy=0.834219
+INFO:root:Epoch[7] Batch [200]	Speed: 8845.39 samples/sec	accuracy=0.832031
+INFO:root:Epoch[7] Batch [250]	Speed: 8991.54 samples/sec	accuracy=0.834063
+INFO:root:Epoch[7] Batch [300]	Speed: 9041.60 samples/sec	accuracy=0.826094
+INFO:root:Epoch[7] Batch [350]	Speed: 7948.92 samples/sec	accuracy=0.831875
+INFO:root:Epoch[7] Resetting Data Iterator
+INFO:root:Epoch[7] Time cost=5.789
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0008.params"
+INFO:root:Epoch[7] Validation-accuracy=0.799248
+INFO:root:Epoch[8] Batch [50]	Speed: 7778.97 samples/sec	accuracy=0.831094
+INFO:root:Epoch[8] Batch [100]	Speed: 8529.24 samples/sec	accuracy=0.845156
+INFO:root:Epoch[8] Batch [150]	Speed: 8614.05 samples/sec	accuracy=0.846719
+INFO:root:Epoch[8] Batch [200]	Speed: 8122.90 samples/sec	accuracy=0.836250
+INFO:root:Epoch[8] Batch [250]	Speed: 8279.00 samples/sec	accuracy=0.840156
+INFO:root:Epoch[8] Batch [300]	Speed: 9080.24 samples/sec	accuracy=0.845781
+INFO:root:Epoch[8] Batch [350]	Speed: 8981.98 samples/sec	accuracy=0.846250
+INFO:root:Epoch[8] Resetting Data Iterator
+INFO:root:Epoch[8] Time cost=6.211
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0009.params"
+INFO:root:Epoch[8] Validation-accuracy=0.815071
+INFO:root:Epoch[9] Batch [50]	Speed: 8442.98 samples/sec	accuracy=0.843437
+INFO:root:Epoch[9] Batch [100]	Speed: 8653.16 samples/sec	accuracy=0.846875
+INFO:root:Epoch[9] Batch [150]	Speed: 9210.46 samples/sec	accuracy=0.853906
+INFO:root:Epoch[9] Batch [200]	Speed: 7934.04 samples/sec	accuracy=0.857500
+INFO:root:Epoch[9] Batch [250]	Speed: 8811.31 samples/sec	accuracy=0.853594
+INFO:root:Epoch[9] Batch [300]	Speed: 8036.82 samples/sec	accuracy=0.851875
+INFO:root:Epoch[9] Batch [350]	Speed: 8709.56 samples/sec	accuracy=0.854844
+INFO:root:Epoch[9] Resetting Data Iterator
+INFO:root:Epoch[9] Time cost=5.843
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0010.params"
+INFO:root:Epoch[9] Validation-accuracy=0.803303
+INFO:root:Epoch[10] Batch [50]	Speed: 8672.06 samples/sec	accuracy=0.848437
+INFO:root:Epoch[10] Batch [100]	Speed: 8890.68 samples/sec	accuracy=0.854375
+INFO:root:Epoch[10] Batch [150]	Speed: 9174.13 samples/sec	accuracy=0.858281
+INFO:root:Epoch[10] Batch [200]	Speed: 6959.68 samples/sec	accuracy=0.846250
+INFO:root:Epoch[10] Batch [250]	Speed: 8764.90 samples/sec	accuracy=0.857344
+INFO:root:Epoch[10] Batch [300]	Speed: 8567.66 samples/sec	accuracy=0.858125
+INFO:root:Epoch[10] Batch [350]	Speed: 7860.92 samples/sec	accuracy=0.859219
+INFO:root:Epoch[10] Resetting Data Iterator
+INFO:root:Epoch[10] Time cost=5.954
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0011.params"
+INFO:root:Epoch[10] Validation-accuracy=0.806566
+INFO:root:Epoch[11] Batch [50]	Speed: 8093.86 samples/sec	accuracy=0.864531
+INFO:root:Epoch[11] Batch [100]	Speed: 6426.01 samples/sec	accuracy=0.856875
+INFO:root:Epoch[11] Batch [150]	Speed: 9155.73 samples/sec	accuracy=0.864062
+INFO:root:Epoch[11] Batch [200]	Speed: 8980.99 samples/sec	accuracy=0.857344
+INFO:root:Epoch[11] Batch [250]	Speed: 8329.10 samples/sec	accuracy=0.865625
+INFO:root:Epoch[11] Batch [300]	Speed: 8647.15 samples/sec	accuracy=0.868750
+INFO:root:Epoch[11] Batch [350]	Speed: 9092.20 samples/sec	accuracy=0.866875
+INFO:root:Epoch[11] Resetting Data Iterator
+INFO:root:Epoch[11] Time cost=6.022
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0012.params"
+INFO:root:Epoch[11] Validation-accuracy=0.809335
+INFO:root:Epoch[12] Batch [50]	Speed: 8527.72 samples/sec	accuracy=0.865313
+INFO:root:Epoch[12] Batch [100]	Speed: 8492.01 samples/sec	accuracy=0.868437
+INFO:root:Epoch[12] Batch [150]	Speed: 8162.03 samples/sec	accuracy=0.871719
+INFO:root:Epoch[12] Batch [200]	Speed: 8530.79 samples/sec	accuracy=0.865313
+INFO:root:Epoch[12] Batch [250]	Speed: 8622.03 samples/sec	accuracy=0.862500
+INFO:root:Epoch[12] Batch [300]	Speed: 8047.60 samples/sec	accuracy=0.867344
+INFO:root:Epoch[12] Batch [350]	Speed: 8750.08 samples/sec	accuracy=0.870469
+INFO:root:Epoch[12] Resetting Data Iterator
+INFO:root:Epoch[12] Time cost=5.954
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0013.params"
+INFO:root:Epoch[12] Validation-accuracy=0.814775
+INFO:root:Epoch[13] Batch [50]	Speed: 8148.06 samples/sec	accuracy=0.871563
+INFO:root:Epoch[13] Batch [100]	Speed: 7992.42 samples/sec	accuracy=0.870781
+INFO:root:Epoch[13] Batch [150]	Speed: 8684.54 samples/sec	accuracy=0.873594
+INFO:root:Epoch[13] Batch [200]	Speed: 7744.04 samples/sec	accuracy=0.869687
+INFO:root:Epoch[13] Batch [250]	Speed: 8560.68 samples/sec	accuracy=0.872812
+INFO:root:Epoch[13] Batch [300]	Speed: 8565.52 samples/sec	accuracy=0.874844
+INFO:root:Epoch[13] Batch [350]	Speed: 8318.45 samples/sec	accuracy=0.873125
+INFO:root:Epoch[13] Resetting Data Iterator
+INFO:root:Epoch[13] Time cost=6.079
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0014.params"
+INFO:root:Epoch[13] Validation-accuracy=0.834751
+INFO:root:Epoch[14] Batch [50]	Speed: 8025.07 samples/sec	accuracy=0.874687
+INFO:root:Epoch[14] Batch [100]	Speed: 8594.00 samples/sec	accuracy=0.878750
+INFO:root:Epoch[14] Batch [150]	Speed: 8845.26 samples/sec	accuracy=0.882812
+INFO:root:Epoch[14] Batch [200]	Speed: 9250.99 samples/sec	accuracy=0.868906
+INFO:root:Epoch[14] Batch [250]	Speed: 6675.69 samples/sec	accuracy=0.878750
+INFO:root:Epoch[14] Batch [300]	Speed: 6936.58 samples/sec	accuracy=0.876250
+INFO:root:Epoch[14] Batch [350]	Speed: 8267.28 samples/sec	accuracy=0.883437
+INFO:root:Epoch[14] Resetting Data Iterator
+INFO:root:Epoch[14] Time cost=6.250
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0015.params"
+INFO:root:Epoch[14] Validation-accuracy=0.827433
+INFO:root:Epoch[15] Batch [50]	Speed: 7284.81 samples/sec	accuracy=0.874687
+INFO:root:Epoch[15] Batch [100]	Speed: 6308.67 samples/sec	accuracy=0.884062
+INFO:root:Epoch[15] Batch [150]	Speed: 8499.04 samples/sec	accuracy=0.887344
+INFO:root:Epoch[15] Batch [200]	Speed: 7182.90 samples/sec	accuracy=0.886875
+INFO:root:Epoch[15] Batch [250]	Speed: 9217.70 samples/sec	accuracy=0.883906
+INFO:root:Epoch[15] Batch [300]	Speed: 9112.54 samples/sec	accuracy=0.886875
+INFO:root:Epoch[15] Batch [350]	Speed: 9163.97 samples/sec	accuracy=0.878594
+INFO:root:Epoch[15] Resetting Data Iterator
+INFO:root:Epoch[15] Time cost=6.235
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0016.params"
+INFO:root:Epoch[15] Validation-accuracy=0.835641
+INFO:root:Epoch[16] Batch [50]	Speed: 8799.63 samples/sec	accuracy=0.885000
+INFO:root:Epoch[16] Batch [100]	Speed: 7545.05 samples/sec	accuracy=0.878125
+INFO:root:Epoch[16] Batch [150]	Speed: 8445.44 samples/sec	accuracy=0.877969
+INFO:root:Epoch[16] Batch [200]	Speed: 7746.06 samples/sec	accuracy=0.885312
+INFO:root:Epoch[16] Batch [250]	Speed: 8031.68 samples/sec	accuracy=0.895625
+INFO:root:Epoch[16] Batch [300]	Speed: 9019.79 samples/sec	accuracy=0.886406
+INFO:root:Epoch[16] Batch [350]	Speed: 9006.08 samples/sec	accuracy=0.882031
+INFO:root:Epoch[16] Resetting Data Iterator
+INFO:root:Epoch[16] Time cost=5.958
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0017.params"
+INFO:root:Epoch[16] Validation-accuracy=0.824565
+INFO:root:Epoch[17] Batch [50]	Speed: 8690.10 samples/sec	accuracy=0.884219
+INFO:root:Epoch[17] Batch [100]	Speed: 8792.81 samples/sec	accuracy=0.893906
+INFO:root:Epoch[17] Batch [150]	Speed: 8806.12 samples/sec	accuracy=0.887656
+INFO:root:Epoch[17] Batch [200]	Speed: 8312.65 samples/sec	accuracy=0.889531
+INFO:root:Epoch[17] Batch [250]	Speed: 7515.43 samples/sec	accuracy=0.894531
+INFO:root:Epoch[17] Batch [300]	Speed: 8316.59 samples/sec	accuracy=0.884219
+INFO:root:Epoch[17] Batch [350]	Speed: 8340.18 samples/sec	accuracy=0.882969
+INFO:root:Epoch[17] Resetting Data Iterator
+INFO:root:Epoch[17] Time cost=5.998
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0018.params"
+INFO:root:Epoch[17] Validation-accuracy=0.831191
+INFO:root:Epoch[18] Batch [50]	Speed: 8144.62 samples/sec	accuracy=0.896719
+INFO:root:Epoch[18] Batch [100]	Speed: 8619.77 samples/sec	accuracy=0.898594
+INFO:root:Epoch[18] Batch [150]	Speed: 8852.31 samples/sec	accuracy=0.886094
+INFO:root:Epoch[18] Batch [200]	Speed: 7885.96 samples/sec	accuracy=0.894219
+INFO:root:Epoch[18] Batch [250]	Speed: 8025.04 samples/sec	accuracy=0.890938
+INFO:root:Epoch[18] Batch [300]	Speed: 9078.09 samples/sec	accuracy=0.895469
+INFO:root:Epoch[18] Batch [350]	Speed: 6531.59 samples/sec	accuracy=0.889219
+INFO:root:Epoch[18] Resetting Data Iterator
+INFO:root:Epoch[18] Time cost=6.191
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0019.params"
+INFO:root:Epoch[18] Validation-accuracy=0.816159
+INFO:root:Epoch[19] Batch [50]	Speed: 9046.88 samples/sec	accuracy=0.891094
+INFO:root:Epoch[19] Batch [100]	Speed: 8123.83 samples/sec	accuracy=0.897813
+INFO:root:Epoch[19] Batch [150]	Speed: 8550.97 samples/sec	accuracy=0.889531
+INFO:root:Epoch[19] Batch [200]	Speed: 8969.87 samples/sec	accuracy=0.894375
+INFO:root:Epoch[19] Batch [250]	Speed: 8775.02 samples/sec	accuracy=0.888594
+INFO:root:Epoch[19] Batch [300]	Speed: 8646.41 samples/sec	accuracy=0.891406
+INFO:root:Epoch[19] Batch [350]	Speed: 8534.79 samples/sec	accuracy=0.897656
+INFO:root:Epoch[19] Resetting Data Iterator
+INFO:root:Epoch[19] Time cost=5.885
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0020.params"
+INFO:root:Epoch[19] Validation-accuracy=0.840585
+INFO:root:Epoch[20] Batch [50]	Speed: 8309.92 samples/sec	accuracy=0.893906
+INFO:root:Epoch[20] Batch [100]	Speed: 8836.45 samples/sec	accuracy=0.901250
+INFO:root:Epoch[20] Batch [150]	Speed: 7388.58 samples/sec	accuracy=0.899375
+INFO:root:Epoch[20] Batch [200]	Speed: 8450.54 samples/sec	accuracy=0.894062
+INFO:root:Epoch[20] Batch [250]	Speed: 8151.88 samples/sec	accuracy=0.898125
+INFO:root:Epoch[20] Batch [300]	Speed: 8701.42 samples/sec	accuracy=0.904531
+INFO:root:Epoch[20] Batch [350]	Speed: 8339.34 samples/sec	accuracy=0.900781
+INFO:root:Epoch[20] Resetting Data Iterator
+INFO:root:Epoch[20] Time cost=6.061
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0021.params"
+INFO:root:Epoch[20] Validation-accuracy=0.828026
+INFO:root:Epoch[21] Batch [50]	Speed: 8228.57 samples/sec	accuracy=0.892969
+INFO:root:Epoch[21] Batch [100]	Speed: 7826.64 samples/sec	accuracy=0.899844
+INFO:root:Epoch[21] Batch [150]	Speed: 8374.86 samples/sec	accuracy=0.897813
+INFO:root:Epoch[21] Batch [200]	Speed: 9029.79 samples/sec	accuracy=0.903906
+INFO:root:Epoch[21] Batch [250]	Speed: 9212.05 samples/sec	accuracy=0.901406
+INFO:root:Epoch[21] Batch [300]	Speed: 7774.09 samples/sec	accuracy=0.896250
+INFO:root:Epoch[21] Batch [350]	Speed: 6702.84 samples/sec	accuracy=0.898594
+INFO:root:Epoch[21] Resetting Data Iterator
+INFO:root:Epoch[21] Time cost=6.164
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0022.params"
+INFO:root:Epoch[21] Validation-accuracy=0.835740
+INFO:root:Epoch[22] Batch [50]	Speed: 7823.81 samples/sec	accuracy=0.899375
+INFO:root:Epoch[22] Batch [100]	Speed: 8175.36 samples/sec	accuracy=0.904531
+INFO:root:Epoch[22] Batch [150]	Speed: 8539.32 samples/sec	accuracy=0.899531
+INFO:root:Epoch[22] Batch [200]	Speed: 8578.65 samples/sec	accuracy=0.900312
+INFO:root:Epoch[22] Batch [250]	Speed: 7264.49 samples/sec	accuracy=0.906250
+INFO:root:Epoch[22] Batch [300]	Speed: 8729.21 samples/sec	accuracy=0.909531
+INFO:root:Epoch[22] Batch [350]	Speed: 8369.43 samples/sec	accuracy=0.900625
+INFO:root:Epoch[22] Resetting Data Iterator
+INFO:root:Epoch[22] Time cost=6.106
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0023.params"
+INFO:root:Epoch[22] Validation-accuracy=0.823477
+INFO:root:Epoch[23] Batch [50]	Speed: 8397.32 samples/sec	accuracy=0.894687
+INFO:root:Epoch[23] Batch [100]	Speed: 5919.47 samples/sec	accuracy=0.898125
+INFO:root:Epoch[23] Batch [150]	Speed: 9077.59 samples/sec	accuracy=0.909844
+INFO:root:Epoch[23] Batch [200]	Speed: 9238.83 samples/sec	accuracy=0.904844
+INFO:root:Epoch[23] Batch [250]	Speed: 9124.68 samples/sec	accuracy=0.912188
+INFO:root:Epoch[23] Batch [300]	Speed: 9025.49 samples/sec	accuracy=0.905469
+INFO:root:Epoch[23] Batch [350]	Speed: 8070.20 samples/sec	accuracy=0.911406
+INFO:root:Epoch[23] Resetting Data Iterator
+INFO:root:Epoch[23] Time cost=6.032
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0024.params"
+INFO:root:Epoch[23] Validation-accuracy=0.819225
+INFO:root:Epoch[24] Batch [50]	Speed: 8321.26 samples/sec	accuracy=0.909531
+INFO:root:Epoch[24] Batch [100]	Speed: 8803.13 samples/sec	accuracy=0.907031
+INFO:root:Epoch[24] Batch [150]	Speed: 8248.45 samples/sec	accuracy=0.909531
+INFO:root:Epoch[24] Batch [200]	Speed: 7517.13 samples/sec	accuracy=0.902031
+INFO:root:Epoch[24] Batch [250]	Speed: 8517.01 samples/sec	accuracy=0.908281
+INFO:root:Epoch[24] Batch [300]	Speed: 9020.68 samples/sec	accuracy=0.905469
+INFO:root:Epoch[24] Batch [350]	Speed: 8516.05 samples/sec	accuracy=0.908750
+INFO:root:Epoch[24] Resetting Data Iterator
+INFO:root:Epoch[24] Time cost=5.984
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0025.params"
+INFO:root:Epoch[24] Validation-accuracy=0.842168
+INFO:root:Epoch[25] Batch [50]	Speed: 8484.44 samples/sec	accuracy=0.903125
+INFO:root:Epoch[25] Batch [100]	Speed: 7953.03 samples/sec	accuracy=0.907656
+INFO:root:Epoch[25] Batch [150]	Speed: 8464.94 samples/sec	accuracy=0.911719
+INFO:root:Epoch[25] Batch [200]	Speed: 8642.77 samples/sec	accuracy=0.905937
+INFO:root:Epoch[25] Batch [250]	Speed: 8660.88 samples/sec	accuracy=0.912031
+INFO:root:Epoch[25] Batch [300]	Speed: 8084.84 samples/sec	accuracy=0.909219
+INFO:root:Epoch[25] Batch [350]	Speed: 9083.05 samples/sec	accuracy=0.910625
+INFO:root:Epoch[25] Resetting Data Iterator
+INFO:root:Epoch[25] Time cost=5.899
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0026.params"
+INFO:root:Epoch[25] Validation-accuracy=0.832180
+INFO:root:Epoch[26] Batch [50]	Speed: 8529.55 samples/sec	accuracy=0.908594
+INFO:root:Epoch[26] Batch [100]	Speed: 8577.40 samples/sec	accuracy=0.914687
+INFO:root:Epoch[26] Batch [150]	Speed: 9058.37 samples/sec	accuracy=0.906563
+INFO:root:Epoch[26] Batch [200]	Speed: 8804.66 samples/sec	accuracy=0.904687
+INFO:root:Epoch[26] Batch [250]	Speed: 8965.92 samples/sec	accuracy=0.909375
+INFO:root:Epoch[26] Batch [300]	Speed: 8869.70 samples/sec	accuracy=0.911719
+INFO:root:Epoch[26] Batch [350]	Speed: 9251.70 samples/sec	accuracy=0.907344
+INFO:root:Epoch[26] Resetting Data Iterator
+INFO:root:Epoch[26] Time cost=5.686
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0027.params"
+INFO:root:Epoch[26] Validation-accuracy=0.836234
+INFO:root:Epoch[27] Batch [50]	Speed: 6743.07 samples/sec	accuracy=0.906250
+INFO:root:Epoch[27] Batch [100]	Speed: 8691.02 samples/sec	accuracy=0.909531
+INFO:root:Epoch[27] Batch [150]	Speed: 8363.41 samples/sec	accuracy=0.911875
+INFO:root:Epoch[27] Batch [200]	Speed: 9128.43 samples/sec	accuracy=0.902500
+INFO:root:Epoch[27] Batch [250]	Speed: 6913.78 samples/sec	accuracy=0.907969
+INFO:root:Epoch[27] Batch [300]	Speed: 8781.22 samples/sec	accuracy=0.909219
+INFO:root:Epoch[27] Batch [350]	Speed: 8975.69 samples/sec	accuracy=0.917344
+INFO:root:Epoch[27] Resetting Data Iterator
+INFO:root:Epoch[27] Time cost=6.140
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0028.params"
+INFO:root:Epoch[27] Validation-accuracy=0.842860
+INFO:root:Epoch[28] Batch [50]	Speed: 7144.37 samples/sec	accuracy=0.914844
+INFO:root:Epoch[28] Batch [100]	Speed: 7620.84 samples/sec	accuracy=0.916094
+INFO:root:Epoch[28] Batch [150]	Speed: 8330.14 samples/sec	accuracy=0.918906
+INFO:root:Epoch[28] Batch [200]	Speed: 7491.38 samples/sec	accuracy=0.907656
+INFO:root:Epoch[28] Batch [250]	Speed: 9147.59 samples/sec	accuracy=0.912031
+INFO:root:Epoch[28] Batch [300]	Speed: 9253.77 samples/sec	accuracy=0.912031
+INFO:root:Epoch[28] Batch [350]	Speed: 8481.77 samples/sec	accuracy=0.915312
+INFO:root:Epoch[28] Resetting Data Iterator
+INFO:root:Epoch[28] Time cost=6.182
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0029.params"
+INFO:root:Epoch[28] Validation-accuracy=0.841377
+INFO:root:Epoch[29] Batch [50]	Speed: 8625.88 samples/sec	accuracy=0.916562
+INFO:root:Epoch[29] Batch [100]	Speed: 8238.90 samples/sec	accuracy=0.912656
+INFO:root:Epoch[29] Batch [150]	Speed: 8054.28 samples/sec	accuracy=0.911719
+INFO:root:Epoch[29] Batch [200]	Speed: 7272.95 samples/sec	accuracy=0.905937
+INFO:root:Epoch[29] Batch [250]	Speed: 8550.35 samples/sec	accuracy=0.911406
+INFO:root:Epoch[29] Batch [300]	Speed: 8791.09 samples/sec	accuracy=0.918438
+INFO:root:Epoch[29] Batch [350]	Speed: 8866.71 samples/sec	accuracy=0.918281
+INFO:root:Epoch[29] Resetting Data Iterator
+INFO:root:Epoch[29] Time cost=6.181
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0030.params"
+INFO:root:Epoch[29] Validation-accuracy=0.836135
+INFO:root:Epoch[30] Batch [50]	Speed: 9070.97 samples/sec	accuracy=0.910937
+INFO:root:Epoch[30] Batch [100]	Speed: 7871.52 samples/sec	accuracy=0.916406
+INFO:root:Epoch[30] Batch [150]	Speed: 7712.12 samples/sec	accuracy=0.913594
+INFO:root:Epoch[30] Batch [200]	Speed: 8236.85 samples/sec	accuracy=0.912656
+INFO:root:Epoch[30] Batch [250]	Speed: 8256.56 samples/sec	accuracy=0.913438
+INFO:root:Epoch[30] Batch [300]	Speed: 8779.00 samples/sec	accuracy=0.917969
+INFO:root:Epoch[30] Batch [350]	Speed: 9063.06 samples/sec	accuracy=0.913594
+INFO:root:Epoch[30] Resetting Data Iterator
+INFO:root:Epoch[30] Time cost=5.986
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0031.params"
+INFO:root:Epoch[30] Validation-accuracy=0.843552
+INFO:root:Epoch[31] Batch [50]	Speed: 6488.43 samples/sec	accuracy=0.921250
+INFO:root:Epoch[31] Batch [100]	Speed: 8178.31 samples/sec	accuracy=0.922656
+INFO:root:Epoch[31] Batch [150]	Speed: 8411.80 samples/sec	accuracy=0.912031
+INFO:root:Epoch[31] Batch [200]	Speed: 8827.93 samples/sec	accuracy=0.918750
+INFO:root:Epoch[31] Batch [250]	Speed: 7886.77 samples/sec	accuracy=0.921875
+INFO:root:Epoch[31] Batch [300]	Speed: 7437.46 samples/sec	accuracy=0.920781
+INFO:root:Epoch[31] Batch [350]	Speed: 8548.16 samples/sec	accuracy=0.924063
+INFO:root:Epoch[31] Resetting Data Iterator
+INFO:root:Epoch[31] Time cost=6.355
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0032.params"
+INFO:root:Epoch[31] Validation-accuracy=0.836729
+INFO:root:Epoch[32] Batch [50]	Speed: 7095.19 samples/sec	accuracy=0.915781
+INFO:root:Epoch[32] Batch [100]	Speed: 8310.72 samples/sec	accuracy=0.924063
+INFO:root:Epoch[32] Batch [150]	Speed: 7791.59 samples/sec	accuracy=0.923281
+INFO:root:Epoch[32] Batch [200]	Speed: 8198.53 samples/sec	accuracy=0.915000
+INFO:root:Epoch[32] Batch [250]	Speed: 7932.45 samples/sec	accuracy=0.910312
+INFO:root:Epoch[32] Batch [300]	Speed: 8346.22 samples/sec	accuracy=0.925156
+INFO:root:Epoch[32] Batch [350]	Speed: 8477.00 samples/sec	accuracy=0.917031
+INFO:root:Epoch[32] Resetting Data Iterator
+INFO:root:Epoch[32] Time cost=6.252
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0033.params"
+INFO:root:Epoch[32] Validation-accuracy=0.839893
+INFO:root:Epoch[33] Batch [50]	Speed: 7553.59 samples/sec	accuracy=0.921562
+INFO:root:Epoch[33] Batch [100]	Speed: 8028.74 samples/sec	accuracy=0.916875
+INFO:root:Epoch[33] Batch [150]	Speed: 8621.67 samples/sec	accuracy=0.921094
+INFO:root:Epoch[33] Batch [200]	Speed: 8705.66 samples/sec	accuracy=0.920781
+INFO:root:Epoch[33] Batch [250]	Speed: 7333.05 samples/sec	accuracy=0.921562
+INFO:root:Epoch[33] Batch [300]	Speed: 8196.06 samples/sec	accuracy=0.925937
+INFO:root:Epoch[33] Batch [350]	Speed: 8381.27 samples/sec	accuracy=0.919687
+INFO:root:Epoch[33] Resetting Data Iterator
+INFO:root:Epoch[33] Time cost=6.172
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0034.params"
+INFO:root:Epoch[33] Validation-accuracy=0.833861
+INFO:root:Epoch[34] Batch [50]	Speed: 9006.42 samples/sec	accuracy=0.924063
+INFO:root:Epoch[34] Batch [100]	Speed: 8973.39 samples/sec	accuracy=0.920781
+INFO:root:Epoch[34] Batch [150]	Speed: 7955.92 samples/sec	accuracy=0.917969
+INFO:root:Epoch[34] Batch [200]	Speed: 8433.96 samples/sec	accuracy=0.915937
+INFO:root:Epoch[34] Batch [250]	Speed: 8382.91 samples/sec	accuracy=0.928906
+INFO:root:Epoch[34] Batch [300]	Speed: 8777.43 samples/sec	accuracy=0.926875
+INFO:root:Epoch[34] Batch [350]	Speed: 8971.71 samples/sec	accuracy=0.917813
+INFO:root:Epoch[34] Resetting Data Iterator
+INFO:root:Epoch[34] Time cost=5.885
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0035.params"
+INFO:root:Epoch[34] Validation-accuracy=0.823675
+INFO:root:Epoch[35] Batch [50]	Speed: 8102.32 samples/sec	accuracy=0.924531
+INFO:root:Epoch[35] Batch [100]	Speed: 8898.65 samples/sec	accuracy=0.925000
+INFO:root:Epoch[35] Batch [150]	Speed: 7964.82 samples/sec	accuracy=0.925000
+INFO:root:Epoch[35] Batch [200]	Speed: 9002.06 samples/sec	accuracy=0.926250
+INFO:root:Epoch[35] Batch [250]	Speed: 9191.15 samples/sec	accuracy=0.924844
+INFO:root:Epoch[35] Batch [300]	Speed: 8334.76 samples/sec	accuracy=0.924219
+INFO:root:Epoch[35] Batch [350]	Speed: 8708.40 samples/sec	accuracy=0.926562
+INFO:root:Epoch[35] Resetting Data Iterator
+INFO:root:Epoch[35] Time cost=5.892
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0036.params"
+INFO:root:Epoch[35] Validation-accuracy=0.853540
+INFO:root:Epoch[36] Batch [50]	Speed: 5923.01 samples/sec	accuracy=0.924375
+INFO:root:Epoch[36] Batch [100]	Speed: 8543.39 samples/sec	accuracy=0.924375
+INFO:root:Epoch[36] Batch [150]	Speed: 8197.35 samples/sec	accuracy=0.919844
+INFO:root:Epoch[36] Batch [200]	Speed: 8482.48 samples/sec	accuracy=0.922031
+INFO:root:Epoch[36] Batch [250]	Speed: 8583.25 samples/sec	accuracy=0.917500
+INFO:root:Epoch[36] Batch [300]	Speed: 8455.16 samples/sec	accuracy=0.926875
+INFO:root:Epoch[36] Batch [350]	Speed: 8410.23 samples/sec	accuracy=0.930469
+INFO:root:Epoch[36] Resetting Data Iterator
+INFO:root:Epoch[36] Time cost=6.271
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0037.params"
+INFO:root:Epoch[36] Validation-accuracy=0.852255
+INFO:root:Epoch[37] Batch [50]	Speed: 7848.96 samples/sec	accuracy=0.916719
+INFO:root:Epoch[37] Batch [100]	Speed: 8480.65 samples/sec	accuracy=0.920781
+INFO:root:Epoch[37] Batch [150]	Speed: 8144.36 samples/sec	accuracy=0.921875
+INFO:root:Epoch[37] Batch [200]	Speed: 8446.20 samples/sec	accuracy=0.919063
+INFO:root:Epoch[37] Batch [250]	Speed: 8375.65 samples/sec	accuracy=0.924063
+INFO:root:Epoch[37] Batch [300]	Speed: 7096.21 samples/sec	accuracy=0.923750
+INFO:root:Epoch[37] Batch [350]	Speed: 8169.88 samples/sec	accuracy=0.922813
+INFO:root:Epoch[37] Resetting Data Iterator
+INFO:root:Epoch[37] Time cost=6.403
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0038.params"
+INFO:root:Epoch[37] Validation-accuracy=0.852057
+INFO:root:Epoch[38] Batch [50]	Speed: 8134.87 samples/sec	accuracy=0.931250
+INFO:root:Epoch[38] Batch [100]	Speed: 7813.15 samples/sec	accuracy=0.923906
+INFO:root:Epoch[38] Batch [150]	Speed: 9142.32 samples/sec	accuracy=0.926719
+INFO:root:Epoch[38] Batch [200]	Speed: 8849.82 samples/sec	accuracy=0.923438
+INFO:root:Epoch[38] Batch [250]	Speed: 8818.94 samples/sec	accuracy=0.929063
+INFO:root:Epoch[38] Batch [300]	Speed: 8947.53 samples/sec	accuracy=0.925625
+INFO:root:Epoch[38] Batch [350]	Speed: 8721.18 samples/sec	accuracy=0.924687
+INFO:root:Epoch[38] Resetting Data Iterator
+INFO:root:Epoch[38] Time cost=6.232
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0039.params"
+INFO:root:Epoch[38] Validation-accuracy=0.845728
+INFO:root:Epoch[39] Batch [50]	Speed: 8241.06 samples/sec	accuracy=0.925937
+INFO:root:Epoch[39] Batch [100]	Speed: 7157.20 samples/sec	accuracy=0.923750
+INFO:root:Epoch[39] Batch [150]	Speed: 8334.72 samples/sec	accuracy=0.924219
+INFO:root:Epoch[39] Batch [200]	Speed: 7727.57 samples/sec	accuracy=0.919844
+INFO:root:Epoch[39] Batch [250]	Speed: 8739.42 samples/sec	accuracy=0.925937
+INFO:root:Epoch[39] Batch [300]	Speed: 7639.37 samples/sec	accuracy=0.918594
+INFO:root:Epoch[39] Batch [350]	Speed: 8326.56 samples/sec	accuracy=0.927344
+INFO:root:Epoch[39] Resetting Data Iterator
+INFO:root:Epoch[39] Time cost=6.231
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0040.params"
+INFO:root:Epoch[39] Validation-accuracy=0.847805
+INFO:root:Epoch[40] Batch [50]	Speed: 8309.69 samples/sec	accuracy=0.929688
+INFO:root:Epoch[40] Batch [100]	Speed: 8458.39 samples/sec	accuracy=0.931094
+INFO:root:Epoch[40] Batch [150]	Speed: 8183.40 samples/sec	accuracy=0.927969
+INFO:root:Epoch[40] Batch [200]	Speed: 7924.19 samples/sec	accuracy=0.924844
+INFO:root:Epoch[40] Batch [250]	Speed: 8696.59 samples/sec	accuracy=0.923750
+INFO:root:Epoch[40] Batch [300]	Speed: 8345.20 samples/sec	accuracy=0.927188
+INFO:root:Epoch[40] Batch [350]	Speed: 7487.78 samples/sec	accuracy=0.930625
+INFO:root:Epoch[40] Resetting Data Iterator
+INFO:root:Epoch[40] Time cost=6.164
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0041.params"
+INFO:root:Epoch[40] Validation-accuracy=0.847903
+INFO:root:Epoch[41] Batch [50]	Speed: 7061.73 samples/sec	accuracy=0.925156
+INFO:root:Epoch[41] Batch [100]	Speed: 8468.92 samples/sec	accuracy=0.931094
+INFO:root:Epoch[41] Batch [150]	Speed: 8241.07 samples/sec	accuracy=0.928750
+INFO:root:Epoch[41] Batch [200]	Speed: 7354.58 samples/sec	accuracy=0.926562
+INFO:root:Epoch[41] Batch [250]	Speed: 8510.69 samples/sec	accuracy=0.926094
+INFO:root:Epoch[41] Batch [300]	Speed: 6930.22 samples/sec	accuracy=0.930625
+INFO:root:Epoch[41] Batch [350]	Speed: 8608.82 samples/sec	accuracy=0.932969
+INFO:root:Epoch[41] Resetting Data Iterator
+INFO:root:Epoch[41] Time cost=6.482
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0042.params"
+INFO:root:Epoch[41] Validation-accuracy=0.846519
+INFO:root:Epoch[42] Batch [50]	Speed: 7612.89 samples/sec	accuracy=0.926250
+INFO:root:Epoch[42] Batch [100]	Speed: 8434.47 samples/sec	accuracy=0.926719
+INFO:root:Epoch[42] Batch [150]	Speed: 8652.45 samples/sec	accuracy=0.930937
+INFO:root:Epoch[42] Batch [200]	Speed: 8632.75 samples/sec	accuracy=0.923594
+INFO:root:Epoch[42] Batch [250]	Speed: 7510.11 samples/sec	accuracy=0.926094
+INFO:root:Epoch[42] Batch [300]	Speed: 7417.32 samples/sec	accuracy=0.937187
+INFO:root:Epoch[42] Batch [350]	Speed: 8561.27 samples/sec	accuracy=0.931250
+INFO:root:Epoch[42] Resetting Data Iterator
+INFO:root:Epoch[42] Time cost=6.153
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0043.params"
+INFO:root:Epoch[42] Validation-accuracy=0.841574
+INFO:root:Epoch[43] Batch [50]	Speed: 8921.33 samples/sec	accuracy=0.922813
+INFO:root:Epoch[43] Batch [100]	Speed: 8185.19 samples/sec	accuracy=0.932500
+INFO:root:Epoch[43] Batch [150]	Speed: 7629.30 samples/sec	accuracy=0.931875
+INFO:root:Epoch[43] Batch [200]	Speed: 8196.20 samples/sec	accuracy=0.929688
+INFO:root:Epoch[43] Batch [250]	Speed: 8260.95 samples/sec	accuracy=0.927344
+INFO:root:Epoch[43] Batch [300]	Speed: 7626.33 samples/sec	accuracy=0.929063
+INFO:root:Epoch[43] Batch [350]	Speed: 8410.05 samples/sec	accuracy=0.930156
+INFO:root:Epoch[43] Resetting Data Iterator
+INFO:root:Epoch[43] Time cost=6.166
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0044.params"
+INFO:root:Epoch[43] Validation-accuracy=0.833366
+INFO:root:Epoch[44] Batch [50]	Speed: 8383.01 samples/sec	accuracy=0.927969
+INFO:root:Epoch[44] Batch [100]	Speed: 7811.82 samples/sec	accuracy=0.938438
+INFO:root:Epoch[44] Batch [150]	Speed: 8410.54 samples/sec	accuracy=0.928906
+INFO:root:Epoch[44] Batch [200]	Speed: 8549.76 samples/sec	accuracy=0.926562
+INFO:root:Epoch[44] Batch [250]	Speed: 6397.05 samples/sec	accuracy=0.932031
+INFO:root:Epoch[44] Batch [300]	Speed: 9047.17 samples/sec	accuracy=0.935937
+INFO:root:Epoch[44] Batch [350]	Speed: 9052.95 samples/sec	accuracy=0.931250
+INFO:root:Epoch[44] Resetting Data Iterator
+INFO:root:Epoch[44] Time cost=6.125
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0045.params"
+INFO:root:Epoch[44] Validation-accuracy=0.827828
+INFO:root:Epoch[45] Batch [50]	Speed: 8728.10 samples/sec	accuracy=0.928438
+INFO:root:Epoch[45] Batch [100]	Speed: 8296.23 samples/sec	accuracy=0.924063
+INFO:root:Epoch[45] Batch [150]	Speed: 8239.11 samples/sec	accuracy=0.924531
+INFO:root:Epoch[45] Batch [200]	Speed: 8992.27 samples/sec	accuracy=0.929688
+INFO:root:Epoch[45] Batch [250]	Speed: 8920.05 samples/sec	accuracy=0.928125
+INFO:root:Epoch[45] Batch [300]	Speed: 9190.03 samples/sec	accuracy=0.931719
+INFO:root:Epoch[45] Batch [350]	Speed: 8861.96 samples/sec	accuracy=0.929531
+INFO:root:Epoch[45] Resetting Data Iterator
+INFO:root:Epoch[45] Time cost=6.059
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0046.params"
+INFO:root:Epoch[45] Validation-accuracy=0.843157
+INFO:root:Epoch[46] Batch [50]	Speed: 8287.68 samples/sec	accuracy=0.933281
+INFO:root:Epoch[46] Batch [100]	Speed: 8740.11 samples/sec	accuracy=0.935781
+INFO:root:Epoch[46] Batch [150]	Speed: 8388.36 samples/sec	accuracy=0.931719
+INFO:root:Epoch[46] Batch [200]	Speed: 8278.02 samples/sec	accuracy=0.927188
+INFO:root:Epoch[46] Batch [250]	Speed: 8165.29 samples/sec	accuracy=0.931094
+INFO:root:Epoch[46] Batch [300]	Speed: 8166.14 samples/sec	accuracy=0.937500
+INFO:root:Epoch[46] Batch [350]	Speed: 8199.93 samples/sec	accuracy=0.932813
+INFO:root:Epoch[46] Resetting Data Iterator
+INFO:root:Epoch[46] Time cost=6.004
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0047.params"
+INFO:root:Epoch[46] Validation-accuracy=0.840289
+INFO:root:Epoch[47] Batch [50]	Speed: 8177.33 samples/sec	accuracy=0.931094
+INFO:root:Epoch[47] Batch [100]	Speed: 8761.37 samples/sec	accuracy=0.932031
+INFO:root:Epoch[47] Batch [150]	Speed: 8811.07 samples/sec	accuracy=0.933594
+INFO:root:Epoch[47] Batch [200]	Speed: 8784.08 samples/sec	accuracy=0.931250
+INFO:root:Epoch[47] Batch [250]	Speed: 8239.20 samples/sec	accuracy=0.935156
+INFO:root:Epoch[47] Batch [300]	Speed: 8006.99 samples/sec	accuracy=0.933125
+INFO:root:Epoch[47] Batch [350]	Speed: 8085.18 samples/sec	accuracy=0.932031
+INFO:root:Epoch[47] Resetting Data Iterator
+INFO:root:Epoch[47] Time cost=6.008
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0048.params"
+INFO:root:Epoch[47] Validation-accuracy=0.854529
+INFO:root:Epoch[48] Batch [50]	Speed: 8555.56 samples/sec	accuracy=0.925625
+INFO:root:Epoch[48] Batch [100]	Speed: 8696.25 samples/sec	accuracy=0.937656
+INFO:root:Epoch[48] Batch [150]	Speed: 8718.92 samples/sec	accuracy=0.936875
+INFO:root:Epoch[48] Batch [200]	Speed: 8304.06 samples/sec	accuracy=0.936875
+INFO:root:Epoch[48] Batch [250]	Speed: 6708.84 samples/sec	accuracy=0.930312
+INFO:root:Epoch[48] Batch [300]	Speed: 9092.86 samples/sec	accuracy=0.937969
+INFO:root:Epoch[48] Batch [350]	Speed: 9085.67 samples/sec	accuracy=0.930937
+INFO:root:Epoch[48] Resetting Data Iterator
+INFO:root:Epoch[48] Time cost=5.969
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0049.params"
+INFO:root:Epoch[48] Validation-accuracy=0.845233
+INFO:root:Epoch[49] Batch [50]	Speed: 7758.43 samples/sec	accuracy=0.929375
+INFO:root:Epoch[49] Batch [100]	Speed: 8238.36 samples/sec	accuracy=0.927188
+INFO:root:Epoch[49] Batch [150]	Speed: 8405.17 samples/sec	accuracy=0.931094
+INFO:root:Epoch[49] Batch [200]	Speed: 9105.23 samples/sec	accuracy=0.928125
+INFO:root:Epoch[49] Batch [250]	Speed: 8216.80 samples/sec	accuracy=0.924687
+INFO:root:Epoch[49] Batch [300]	Speed: 8526.22 samples/sec	accuracy=0.933906
+INFO:root:Epoch[49] Batch [350]	Speed: 8472.97 samples/sec	accuracy=0.930469
+INFO:root:Epoch[49] Resetting Data Iterator
+INFO:root:Epoch[49] Time cost=5.999
+INFO:root:Saved checkpoint to "model/resnet-cifar10-20-0-0050.params"
+INFO:root:Epoch[49] Validation-accuracy=0.833762
